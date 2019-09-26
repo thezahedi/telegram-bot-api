@@ -26,32 +26,3 @@ or
 php composer.phar require thezahedi/telegram-bot-api
 ```
 Note: If you don't have Composer you can download it [HERE](https://getcomposer.org/download/).
-
-#### Using release archives
-https://github.com/thezahedi/telegram-bot-api/releases
-
-#### Using Git
-From a project directory, run:
-```
-git clone https://github.com/thezahedi/telegram-bot-api.git
-```
-
-Installation
----------
-#### Via Composer's autoloader
-After downloading by using Composer, you can include Composer's autoloader:
-```php
-include (__DIR__ . '/vendor/autoload.php');
-
-$telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
-```
-
-#### Via telegram-bot-api class
-Copy Telegram.php into your server and include it in your new bot script:
-```php
-include 'Telegram.php';
-
-$telegram = new Telegram('YOUR TELEGRAM TOKEN HERE');
-```
-
-Note: To enable error log file, also copy TelegramErrorLogger.php in the same directory of Telegram.php file.
