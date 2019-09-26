@@ -1,11 +1,13 @@
 <?php
 
+namespace TheZahedi\TelegramBotApi;
+
 /**
  * Telegram Error Logger Class.
  *
  * @author shakibonline <shakiba_9@yahoo.com>
  */
-class TelegramErrorLogger
+trait TelegramErrorLogger
 {
     private static $self;
 

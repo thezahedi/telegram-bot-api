@@ -1,14 +1,12 @@
 <?php
 
+namespace TheZahedi\TelegramBotApi;
+
 /**
  * Telegram Bot API for PHP
  * @author Saman Zahedi <isamanzahedi@gmail.com>
  * @url http://saman.click
  */
-
-if (file_exists(__DIR__ . 'TelegramErrorLogger.php')) {
-    require_once __DIR__ . 'TelegramErrorLogger.php';
-}
 
 /**
  * @method array sendMessage(array $content)
@@ -71,6 +69,8 @@ if (file_exists(__DIR__ . 'TelegramErrorLogger.php')) {
  */
 class Telegram
 {
+    use TelegramErrorLogger;
+
     const INLINE_QUERY = 'inline_query';
     const CALLBACK_QUERY = 'callback_query';
     const EDITED_MESSAGE = 'edited_message';
@@ -192,10 +192,8 @@ class Telegram
         echo $result;
         curl_close($ch);
         if ($this->log_errors) {
-            if (class_exists('TelegramErrorLogger')) {
-                $loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
-                TelegramErrorLogger::log(json_decode($result, true), $loggerArray);
-            }
+            $loggerArray = ($this->getData() == null) ? [$content] : [$this->getData(), $content];
+            self::log(json_decode($result, true), $loggerArray);
         }
 
         return $result;

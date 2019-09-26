@@ -14,9 +14,8 @@
     "php": ">=5.0"
   },
   "autoload": {
-    "files": [
-      "Telegram.php",
-      "TelegramErrorLogger.php"
-    ]
+    "psr-4": {
+      "TheZahedi\\TelegramBotApi\\": "src"
+    }
   }
 }
