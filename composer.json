@@ -1,0 +1,22 @@
+{
+  "name": "thezahedi/telegram-bot-api",
+  "description": "A very simple PHP Telegram Bot API",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Saman Zahedi",
+      "email": "isamanzahedi@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "minimum-stability": "alpha",
+  "require": {
+    "php": ">=5.0"
+  },
+  "autoload": {
+    "files": [
+      "Telegram.php",
+      "TelegramErrorLogger.php"
+    ]
+  }
+}
