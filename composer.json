@@ -1,6 +1,7 @@
 {
   "name": "thezahedi/telegram-bot-api",
   "description": "A very simple PHP Telegram Bot API",
+  "version": "1.0",
   "type": "library",
   "authors": [
     {
@@ -9,7 +10,6 @@
     }
   ],
   "license": "MIT",
-  "minimum-stability": "alpha",
   "require": {
     "php": ">=5.0"
   },
